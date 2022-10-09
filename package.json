@@ -1,0 +1,26 @@
+{
+  "name": "try-multer",
+  "version": "1.0.0",
+  "description": "Simple multer file upload with sharp (Image Resizer)",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "run": "nodemon app.js"
+  },
+  "keywords": [
+    "multer",
+    "sharp",
+    "multer and sharp"
+  ],
+  "author": "Brayen Luhat",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
+    "multer": "^1.4.5-lts.1",
+    "sharp": "^0.31.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
