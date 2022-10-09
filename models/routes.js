@@ -20,9 +20,9 @@ const upload = multer({
 
 router.post('/', upload, async (req, res) => {
   try {
-    const { filename: image } = req.file
     //sharp it
-    await sharp(req.file.path).resize(400).jpeg({ quality: 90 }).toFile(path.resolve(req.file.destination, 'resized', image))
+    await sharp(req.file.path).resize(400).jpeg({ quality: 90 }).toFile(path.resolve(req.file.destination, 'resized', req.file.filename))
+    console.log(req.file.path)
     //remove original image
     fs.unlinkSync(req.file.path)
     res.status(201).send({
